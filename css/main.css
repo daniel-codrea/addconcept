@@ -459,6 +459,8 @@ footer p{max-width:960px; margin:0 auto; line-height:68px; height:68px; font-fam
 
 .left{float:left;}
 .right{float:right;}
+.pLR20{padding:0 20px;}
+.marginLR10p{margin:0 10%;}
 
 /* ==================================================
    Section Page

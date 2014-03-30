@@ -1,3 +1,51 @@
+<?php
+//If the form is submitted
+if(isset($_POST['submit'])) {
+
+    //Check to make sure that the name field is not empty
+    if(trim($_POST['name']) == '') {
+        $hasError = true;
+    } else {
+        $name = trim($_POST['name']);
+    }
+
+    //Check to make sure sure that a valid email address is submitted
+    if(trim($_POST['email']) == '')  {
+        $hasError = true;
+    } else if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['email']))) {
+        $hasError = true;
+    } else {
+        $email = trim($_POST['email']);
+    }
+
+    //Check to make sure comments were entered
+    if(trim($_POST['comments']) == '') {
+        $hasError = true;
+    } else {
+        if(function_exists('stripslashes')) {
+            $comments = stripslashes(trim($_POST['comments']));
+        } else {
+            $comments = trim($_POST['comments']);
+        }
+    }
+
+    if(trim($_POST['subject']) == '') {
+        $subject = "Formular de contact addconcept.ro";
+    } else {
+        $subject = trim($_POST['subject']);
+    }
+    //If there is no error, send the email
+    if(!isset($hasError)) {
+        $emailTo = 'daniel.codrea@gmail.com'; //Put your own email address here
+        $body = "Nume: $name \n\nEmail: $email \n\nMesaj:\n $comments";
+        $headers = "From: $email" . "\r\n" . 'Reply-To: ' . $email;
+
+        mail($emailTo, $subject, $body, $headers);
+        $emailSent = true;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -37,7 +85,7 @@
                             <li><a href="index.html">Acasa</a></li>
                             <li><a href="portofoliu.html">Portofoliu</a></li>
                             <li><a href="servicii.html">Servicii</a></li>
-                            <li class="current"><a href="contact.html">Contact</a></li>
+                            <li class="current"><a href="contact.php">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -57,16 +105,33 @@
                     <!-- End Title Page -->
                     <div class="row">
                         <div class="span12">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x47490e67aff97bd5%3A0xcc42653eca80fb2c!2sStrada+Padin%2C+Cluj-Napoca%2C+Romania!5e0!3m2!1sen!2s!4v1386699534564" width="960" height="300" frameborder="0" style="border:0"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2732.1851920236504!2d23.590088599999994!3d46.7809551!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490ea3d5e61f75%3A0x29927a87499054b4!2sStrada+Decebal!5e0!3m2!1sen!2s!4v1396161822094" width="960" height="300" frameborder="0" style="border:0"></iframe>
                             <p class="spacer">&nbsp;</p>
+                            <?php if(isset($hasError)) { //If errors are found ?>
+                                <p class="spacer">&nbsp;</p>
+                                <p class="error"><b>Eroare!</b></p>
+                                <p class="error">Va rugam sa verificati corectitudinea informatiilor din fiecare camp obligatoriu al formularului. Va multumim!</p>
+                                <p class="spacer">&nbsp;</p>
+                            <?php } ?>
+                            <?php if(isset($emailSent) && $emailSent == true) { //If email is sent ?>
+                                <p class="spacer">&nbsp;</p>
+                                <p><b>Mesajul a fost trimis cu succes!</b></p>
+                                <p>Multumim <b><?php echo $name;?></b> pentru mesajul tau! Vom reveni cu un raspuns in cel mai scurt timp posibil.</p>
+                                <p class="spacer">&nbsp;</p>
+                            <?php } ?>
                             <div class="secondNavCustom">
-                                <form id="contact-form" class="contact-form" action="sendInfoForm.php" enctype="multipart/form-data" method="post">
-                                    <input type="text" name="siName" placeholder="nume:" />
-                                    <input type="text" name="siEmail" placeholder="email:" />
+                                <form id="contact-form" class="contact-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                    <input type="text" name="name" placeholder="nume:" />
+                                    <input type="text" name="email" placeholder="email:" />
+                                    <input type="text" name="subject" placeholder="subiect:" />
                                     <div class="cf"></div>
-                                    <textarea placeholder="mesaj:" name="siMessage" rows="3"></textarea>
-                                    <input type="submit" value="Trimite email" />
+                                    <textarea placeholder="mesaj:" name="comments" rows="3"></textarea>
+                                    <input type="submit" name="submit" value="Trimite email" />
                                 </form>
+                                <p class="spacer">&nbsp;</p>
+                                <p class="marginLR10p"><b>SC ADDCONCEPT SRL</b> - Numarul in Registrul Comertului  J12/718/2008; Codul Unic de Identificare  RO 23327290</p>
+                                <p class="spacer">&nbsp;</p>
+
                             </div>
                         </div>
 
