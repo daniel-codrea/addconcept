@@ -36,7 +36,7 @@ if(isset($_POST['submit'])) {
     }
     //If there is no error, send the email
     if(!isset($hasError)) {
-        $emailTo = 'daniel.codrea@gmail.com'; //Put your own email address here
+        $emailTo = 'office@addconcept.ro'; //Put your own email address here
         $body = "Nume: $name \n\nEmail: $email \n\nMesaj:\n $comments";
         $headers = "From: $email" . "\r\n" . 'Reply-To: ' . $email;
 
