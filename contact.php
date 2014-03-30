@@ -106,7 +106,7 @@ if(isset($_POST['submit'])) {
                     <!-- End Title Page -->
                     <div class="row">
                         <div class="span12">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2732.1851920236504!2d23.590088599999994!3d46.7809551!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490ea3d5e61f75%3A0x29927a87499054b4!2sStrada+Decebal!5e0!3m2!1sen!2s!4v1396161822094" width="960" height="300" frameborder="0" style="border:0"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2732.1851920236504!2d23.590088599999994!3d46.7809551!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490ea3d5e61f75%3A0x29927a87499054b4!2sStrada+Decebal!5e0!3m2!1sen!2s!4v1396161822094" width="910" height="300" frameborder="0" style="border:0;  margin:0 auto;"></iframe>
                             <p class="spacer">&nbsp;</p>
                             <?php if(isset($hasError)) { //If errors are found ?>
                                 <p class="spacer">&nbsp;</p>
