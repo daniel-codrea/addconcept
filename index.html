@@ -1,7 +1,132 @@
-<!DOCTYPE/>
-<html>
-<head></head>
-<body>
-<h1>Test</h1>
-</body>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div id="wrapper">
+            <header>
+                <div class="sticky-nav">
+                    <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+                    <div id="logo">
+                        <a id="goUp" href="index.html" title="AddConcept">AddConcept</a>
+                    </div>
+                    <nav id="menu">
+                        <ul id="menu-nav">
+                            <li class="current"><a href="index.html">Acasa</a></li>
+                            <li><a href="portofoliu.html">Portofoliu</a></li>
+                            <li><a href="servicii.html">Servicii</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <div id="slider" class="sl-slider-wrapper">
+                <div class="sl-slider">
+                    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                        <div class="sl-slide-inner">
+                            <div class="bg-img bg-img-1"></div>
+                            <h2>Rerstaurari monumente</h2>
+                            <blockquote><p>buna stapanire a tehnicilor specifice artelor decorative ofera garantia restaurarii munumentelor arhitectonice din trecut</p></blockquote>
+                        </div>
+                    </div>
+                    <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                        <div class="sl-slide-inner">
+                            <div class="bg-img bg-img-2"></div>
+                            <h2>Constructii industriale</h2>
+                            <blockquote><p>satisfactia exigentelor clientilor este specializarea echipei AddConcept. Echipamentele profesioniste si materialele de inalta calitate asigura superioritatea constructiilor civile si amenajarilor interioare</p></blockquote>
+                        </div>
+                    </div>
+                    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                        <div class="sl-slide-inner">
+                            <div class="bg-img bg-img-3"></div>
+                            <h2>Constructii civile</h2>
+                            <blockquote><p>echipa AddConcept este specializata in amenajarea oricarei suprafete interioare in conformitate cu gusturile clientului. Fie dormitor, sufragerie sau living, noi asiguram un aspect modern, luxos si relaxant</p></blockquote>
+                        </div>
+                    </div>
+                    <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+                        <div class="sl-slide-inner">
+                            <div class="bg-img bg-img-4"></div>
+                            <h2>Gama de servicii</h2>
+                            <blockquote><p>restaurari monumente istorice; constructii si finisaje la inaltime; constructii civile la cheie; amenajari interiaore; lucrari profesioniste in lemn, piatra, metal, sticla, zidarii, etc.</p></blockquote>
+                        </div>
+                    </div>
+                </div><!-- /sl-slider -->
+                <nav id="nav-dots" class="nav-dots">
+                    <span class="nav-dot-current"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </nav>
+            </div><!-- /slider-wrapper -->
+
+            <div class="push"></div>
+        </div><!-- /#wrapper -->
+
+        <footer>
+            <p><span class="displayBlock left">&copy;<span id="currentYear"></span> AddConcept. Toate drepturile rezervate</span><span class="displayBlock right">Design by <a href="http://www.inadcod.com/" title="inadcodDesign | Web Design &amp; Front-end Development">inadcodDesign</a></span></p>
+            <div class="cf"></div>
+        </footer>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/jquery.ba-cond.min.js"></script>
+        <script src="js/jquery.slitslider.js"></script>
+        <script src="js/waypoints.js"></script> <!-- WayPoints -->
+        <script src="js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                var Page = (function() {
+                    var $nav = $( '#nav-dots > span' ),
+                        slitslider = $( '#slider' ).slitslider( {
+                            onBeforeChange : function( slide, pos ) {
+                                $nav.removeClass( 'nav-dot-current' );
+                                $nav.eq( pos ).addClass( 'nav-dot-current' );
+                            }
+                        } ),
+                        init = function() {
+                            initEvents();
+                        },
+                        initEvents = function() {
+                            $nav.each( function( i ) {
+                                $( this ).on( 'click', function( event ) {
+                                    var $dot = $( this );
+                                    if( !slitslider.isActive() ) {
+                                        $nav.removeClass( 'nav-dot-current' );
+                                        $dot.addClass( 'nav-dot-current' );
+                                    }
+                                    slitslider.jump( i + 1 );
+                                    return false;
+                                } );
+                            } );
+                        };
+                        return { init : init };
+                })();
+                Page.init();
+            });
+        </script>
+    </body>
 </html>
