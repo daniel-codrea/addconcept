@@ -289,6 +289,15 @@
                 portfolioChange("constructiiCivile");
                 portfolioChange("constructiiIndustriale");
                 portfolioChange("restaurari");
+                if ( document.location.href.indexOf('#constructiiCivile') > -1 ) {
+                    $("#constructiiCivileLink").trigger("click");
+                }
+                if ( document.location.href.indexOf('#restaurari') > -1 ) {
+                    $("#restaurariLink").trigger("click");
+                }
+                if ( document.location.href.indexOf('#constructiiIndustriale') > -1 ) {
+                    $("#constructiiIndustrialeLink").trigger("click");
+                }
             });
         </script>
 
