@@ -85,6 +85,7 @@ if(isset($_POST['submit'])) {
                             <li><a href="index.html">Acasa</a></li>
                             <li><a href="portofoliu.html">Portofoliu</a></li>
                             <li><a href="servicii.html">Servicii</a></li>
+                            <li><a href="certificari.html">Certificari</a></li>
                             <li class="current"><a href="contact.php">Contact</a></li>
                         </ul>
                     </nav>
@@ -129,6 +130,9 @@ if(isset($_POST['submit'])) {
                                     <input type="submit" name="submit" value="Trimite email" />
                                 </form>
                                 <p class="spacer">&nbsp;</p>
+                                <p class="marginLR10p"><b>Adrian Petrus</b>, 0745234499, manager</p>
+                                <p class="marginLR10p"><b>Dragoș Sergiu</b>, 0742987519, inginer</p>
+                                <p class="spacer">&nbsp;</p>
                                 <p class="marginLR10p"><b>SC ADDCONCEPT SRL</b> - Numarul in Registrul Comertului  J12/718/2008; Codul Unic de Identificare  RO 23327290</p>
                                 <p class="spacer">&nbsp;</p>
 
@@ -157,10 +161,11 @@ if(isset($_POST['submit'])) {
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
         <script src="js/waypoints.js"></script> <!-- WayPoints -->
         <script src="js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/scripts.js"></script>
 
 
     </body>

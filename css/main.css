@@ -336,6 +336,7 @@ nav#menu #menu-nav li a:hover {
 
 .sl-slider h2, .sl-slider blockquote { padding: 10px 30px 10px 30px; width: 80%; max-width: 960px; color: #333; margin: 0 auto; position: relative; z-index: 100; background:rgba(255,255,255,0.35) url(../img/bg.png) repeat top left;}
 .sl-slider h2 {font-family: 'CabinBold'; font-size: 68px; text-transform:uppercase; color:#7f6423; text-shadow: 0 0 2px rgba(0,0,0,0.9); margin-top:160px; border-radius:10px 10px 0 0; text-align:center;}
+.sl-slider h2 a{color:#7f6423; text-decoration: none;}
 .sl-slider blockquote {font-family: 'CabinBold'; font-size: 30px; padding-bottom:20px; text-shadow: 0 0 2px rgba(255,255,255,0.9); border-radius:0 0 10px 10px; box-shadow:0 5px 3px -3px rgba(0,0,0,0.6);}
 .bg-img {padding: 200px; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; position: absolute; top: -200px; left: -200px; width: 100%; height: 100%; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; background-position: center center;}
 /* Custom navigation dots */
@@ -348,6 +349,22 @@ nav#menu #menu-nav li a:hover {
 .bg-img-2 {background-image: url(../img/2.jpg);}
 .bg-img-3 {background-image: url(../img/3.jpg);}
 .bg-img-4 {background-image: url(../img/4.jpg);}
+.certificari img{height:140px;}
+.mL20{margin-left: 20px !important;}
+#restaurariImgs a img, #constructiiIndustrialeImgs a img, #constructiiCivileImgs a img{max-width:100%; max-height:88px;}
+img.bigPortfolioImg{max-height:250px !important;}
+h4{margin:0 0 1.33em;}
+.imgThumbs{margin:10px 0 5px 20px; border-radius:5px; box-shadow: 0 0 4px rgba(0,0,0,0.8); background: #fff; text-align: center;}
+.imgThumbs img{border-radius: 5px;}
+.pLR20{padding:0 20px;}
+.mT0{margin-top:0 !important;}
+#portfoliuNav{margin:0; padding:0;}
+#portfoliuNav li{list-style: none; margin:0; padding: 10px 0; cursor: pointer;}
+#portfoliuNav li.active{font-weight:bold;}
+
+
+
+
 
 /* Animations for content elements */
 
@@ -461,6 +478,8 @@ footer p{max-width:960px; margin:0 auto; line-height:68px; height:68px; font-fam
 .right{float:right;}
 .pLR20{padding:0 20px;}
 .marginLR10p{margin:0 10%;}
+.w33p{width:33.333333%;}
+.center{text-align: center;}
 
 /* ==================================================
    Section Page

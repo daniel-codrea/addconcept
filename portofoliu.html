@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body class="page2">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -37,6 +37,7 @@
                             <li><a href="index.html">Acasa</a></li>
                             <li class="current"><a href="portofoliu.html">Portofoliu</a></li>
                             <li><a href="servicii.html">Servicii</a></li>
+                            <li><a href="certificari.html">Certificari</a></li>
                             <li><a href="contact.php">Contact</a></li>
                         </ul>
                     </nav>
@@ -44,110 +45,219 @@
             </header>
 
             <!-- Our Work Section -->
-            <div id="work" class="page">
-                <div class="page_container">
+            <div>
+                <div class="page_container2">
                     <!-- Title Page -->
                     <div class="row">
                         <div class="span12">
                             <div class="title-page">
-                                <h2 class="title">Lucrari efectuate</h2>
+                                <h2 class="title">Lucrari efectuate: <span id="restaurariTitle" class="portfolioTitle">restaurari monumente</span><span id="constructiiCivileTitle" class="hidden portfolioTitle">constructii civile</span><span id="constructiiIndustrialeTitle" class="hidden portfolioTitle">constructii industriale</span></h2>
                             </div>
                         </div>
                     </div>
                     <!-- End Title Page -->
-
-                    <!-- Portfolio Projects -->
-                    <div class="row">
-                        <div class="span3 secondNavCustom">
-                            <!-- Filter -->
-                            <nav id="options" class="work-nav">
-                                <ul id="filters" class="option-set" data-option-key="filter">
-                                    <li><a href="#filter" data-option-value="*" class="selected">Toate proiectele</a></li>
-                                    <li><a href="#filter" data-option-value=".biserica">Biserica Evanghelica Lutherana</a></li>
-                                    <li><a href="#filter" data-option-value=".versapak">Cladire birouri Versapak</a></li>
+                    <div class="row collapse">
+                        <div class="span3">
+                            <div class="secondNavCustom boxShadowCustom">
+                                <ul id="portfoliuNav">
+                                    <li id="constructiiCivileLink" class="portfolioMenu">Constructii civile</li>
+                                    <li id="constructiiIndustrialeLink" class="portfolioMenu">Constructii industriale</li>
+                                    <li id="restaurariLink" class="active portfolioMenu">Restaurari monumente</li>
                                 </ul>
-                            </nav>
-                            <!-- End Filter -->
-                        </div>
-
-                        <div class="span9">
-                            <div class="row">
-                                <section id="projects">
-                                    <ul id="thumbs">
-
-                                        <!-- Item Project and Filter Name -->
-                                        <li class="item-thumbs span3 biserica">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Cluj-Napoca: Biserica Evanghelica Lutherana" href="img/portofoliu/biserica/1.jpg">
-                                                <span class="overlay-img"></span>
-                                                <span class="overlay-img-thumb font-icon-plus"></span>
-                                            </a>
-                                            <!-- Thumb Image and Description -->
-                                            <img src="img/portofoliu/biserica/1.jpg" alt="Cluj-Napoca: Biserica Evanghelica Lutherana">
-                                        </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
-                                        <li class="item-thumbs span3 biserica">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Cluj-Napoca: Biserica Evanghelica Lutherana" href="img/portofoliu/biserica/2.jpg">
-                                                <span class="overlay-img"></span>
-                                                <span class="overlay-img-thumb font-icon-plus"></span>
-                                            </a>
-                                            <!-- Thumb Image and Description -->
-                                            <img src="img/portofoliu/biserica/2.jpg" alt="Cluj-Napoca: Biserica Evanghelica Lutherana">
-                                        </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
-                                        <li class="item-thumbs span3 biserica">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Cluj-Napoca: Biserica Evanghelica Lutherana" href="img/portofoliu/biserica/3.jpg">
-                                                <span class="overlay-img"></span>
-                                                <span class="overlay-img-thumb font-icon-plus"></span>
-                                            </a>
-                                            <!-- Thumb Image and Description -->
-                                            <img src="img/portofoliu/biserica/3.jpg" alt="Cluj-Napoca: Biserica Evanghelica Lutherana">
-                                        </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
-                                        <li class="item-thumbs span3 versapak">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Cluj-Napoca: Cladire birouri Versapak" href="img/portofoliu/versapak/1.jpg">
-                                                <span class="overlay-img"></span>
-                                                <span class="overlay-img-thumb font-icon-plus"></span>
-                                            </a>
-                                            <!-- Thumb Image and Description -->
-                                            <img src="img/portofoliu/versapak/1.jpg" alt="Cluj-Napoca: Cladire birouri Versapak">
-                                        </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
-                                        <li class="item-thumbs span3 versapak">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Cluj-Napoca: Cladire birouri Versapak" href="img/portofoliu/versapak/2.jpg">
-                                                <span class="overlay-img"></span>
-                                                <span class="overlay-img-thumb font-icon-plus"></span>
-                                            </a>
-                                            <!-- Thumb Image and Description -->
-                                            <img src="img/portofoliu/versapak/2.jpg" alt="Cluj-Napoca: Cladire birouri Versapak">
-                                        </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
-                                        <li class="item-thumbs span3 versapak">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Cluj-Napoca: Cladire birouri Versapak" href="img/portofoliu/versapak/3.jpg">
-                                                <span class="overlay-img"></span>
-                                                <span class="overlay-img-thumb font-icon-plus"></span>
-                                            </a>
-                                            <!-- Thumb Image and Description -->
-                                            <img src="img/portofoliu/versapak/3.jpg" alt="Cluj-Napoca: Cladire birouri Versapak">
-                                        </li>
-                                        <!-- End Item Project -->
-                                    </ul>
-                                </section>
-
                             </div>
                         </div>
+                        <div id="restaurariImgs" class="span9 portfolioImgs">
+                            <!-- START client portfolio: restaurari -->
+                            <h3 class="pLR20">Cluj-Napoca: Biserica Evanghelica Lutherana</h3>
+                            <div class="span5">
+                                <div class="imgThumbs mT0">
+                                    <a class="fancybox" data-fancybox-group="gallery-biserica" title="Cluj-Napoca: Biserica Evanghelica Lutherana" href="img/portofoliu/biserica/1.jpg">
+                                        <img src="img/portofoliu/biserica/1.jpg" alt="" class="bigPortfolioImg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="span7">
+                                <div class="secondNavCustom boxShadowCustom mL20">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id convallis mi, et ullamcorper lacus. Cras condimentum lorem sed elit fringilla, ac tempus nisl faucibus. Donec porta pulvinar tortor, ut pretium ligula semper eget.</p>
+                                </div>
+                            </div>
+                            <div class="cf"></div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-biserica" title="Cluj-Napoca: Biserica Evanghelica Lutherana" href="img/portofoliu/biserica/2.jpg">
+                                    <img src="img/portofoliu/biserica/2.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-biserica" title="Cluj-Napoca: Biserica Evanghelica Lutherana" href="img/portofoliu/biserica/3.jpg">
+                                    <img src="img/portofoliu/biserica/3.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-biserica" title="Cluj-Napoca: Biserica Evanghelica Lutherana" href="img/portofoliu/biserica/4.jpg">
+                                    <img src="img/portofoliu/biserica/4.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-biserica" title="Cluj-Napoca: Biserica Evanghelica Lutherana" href="img/portofoliu/biserica/5.jpg">
+                                    <img src="img/portofoliu/biserica/5.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-biserica" title="Cluj-Napoca: Biserica Evanghelica Lutherana" href="img/portofoliu/biserica/6.jpg">
+                                    <img src="img/portofoliu/biserica/6.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="cf"></div>
+                            <!-- END client portfolio: restaurari -->
+                        </div>
+                        <div id="constructiiCivileImgs" class="span9 portfolioImgs hidden">
+                            <!-- START client portfolio: constructii civile -->
+                            <h3 class="pLR20">Cluj-Napoca: Apartament</h3>
+                            <div class="span5">
+                                <div class="imgThumbs mT0">
+                                    <a class="fancybox" data-fancybox-group="gallery-apartament" title="Cluj-Napoca: Apartament" href="img/portofoliu/apartament/1.jpg">
+                                        <img src="img/portofoliu/apartament/1.jpg" alt="" class="bigPortfolioImg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="span7">
+                                <div class="secondNavCustom boxShadowCustom mL20">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id convallis mi, et ullamcorper lacus. Cras condimentum lorem sed elit fringilla, ac tempus nisl faucibus. Donec porta pulvinar tortor, ut pretium ligula semper eget.</p>
+                                </div>
+                            </div>
+                            <div class="cf"></div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-apartament" title="Cluj-Napoca: Apartament" href="img/portofoliu/apartament/2.jpg">
+                                    <img src="img/portofoliu/apartament/2.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-apartament" title="Cluj-Napoca: Apartament" href="img/portofoliu/apartament/3.jpg">
+                                    <img src="img/portofoliu/apartament/3.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-apartament" title="Cluj-Napoca: Apartament" href="img/portofoliu/apartament/4.jpg">
+                                    <img src="img/portofoliu/apartament/4.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-apartament" title="Cluj-Napoca: Apartament" href="img/portofoliu/apartament/5.jpg">
+                                    <img src="img/portofoliu/apartament/5.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-apartament" title="Cluj-Napoca: Apartament" href="img/portofoliu/apartament/6.jpg">
+                                    <img src="img/portofoliu/apartament/6.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-apartament" title="Cluj-Napoca: Apartament" href="img/portofoliu/apartament/7.jpg">
+                                    <img src="img/portofoliu/apartament/7.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-apartament" title="Cluj-Napoca: Apartament" href="img/portofoliu/apartament/8.jpg">
+                                    <img src="img/portofoliu/apartament/8.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-apartament" title="Cluj-Napoca: Apartament" href="img/portofoliu/apartament/9.jpg">
+                                    <img src="img/portofoliu/apartament/9.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-apartament" title="Cluj-Napoca: Apartament" href="img/portofoliu/apartament/10.jpg">
+                                    <img src="img/portofoliu/apartament/10.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="cf"></div>
+                            <!-- END client portfolio: constructii civile -->
+                        </div>
+                        <div id="constructiiIndustrialeImgs" class="span9 hidden portfolioImgs">
+                            <!-- START client portfolio: constructii industriale -->
+                            <h3 class="pLR20">Cluj-Napoca: Cladire birouri Versapak</h3>
+                            <div class="span5">
+                                <div class="imgThumbs mT0">
+                                    <a class="fancybox" data-fancybox-group="gallery-versapak" title="Cluj-Napoca: Cladire birouri Versapak" href="img/portofoliu/versapak/1.jpg">
+                                        <img src="img/portofoliu/versapak/1.jpg" alt="" class="bigPortfolioImg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="span7">
+                                <div class="secondNavCustom boxShadowCustom mL20">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id convallis mi, et ullamcorper lacus. Cras condimentum lorem sed elit fringilla, ac tempus nisl faucibus. Donec porta pulvinar tortor, ut pretium ligula semper eget.</p>
+                                </div>
+                            </div>
+                            <div class="cf"></div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-versapak" title="Cluj-Napoca: Cladire birouri Versapak" href="img/portofoliu/versapak/2.jpg">
+                                    <img src="img/portofoliu/versapak/2.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-versapak" title="Cluj-Napoca: Cladire birouri Versapak" href="img/portofoliu/versapak/3.jpg">
+                                    <img src="img/portofoliu/versapak/3.jpg" alt="" />
+                                </a>
+                            </div><div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-versapak" title="Cluj-Napoca: Cladire birouri Versapak" href="img/portofoliu/versapak/4.jpg">
+                                    <img src="img/portofoliu/versapak/4.jpg" alt="" />
+                                </a>
+                            </div><div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-versapak" title="Cluj-Napoca: Cladire birouri Versapak" href="img/portofoliu/versapak/5.jpg">
+                                    <img src="img/portofoliu/versapak/5.jpg" alt="" />
+                                </a>
+                            </div><div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-versapak" title="Cluj-Napoca: Cladire birouri Versapak" href="img/portofoliu/versapak/6.jpg">
+                                    <img src="img/portofoliu/versapak/6.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="cf"></div>
+                            <!-- END client portfolio: constructii industriale -->
+                            <!-- START client portfolio: constructii industriale -->
+                            <h3 class="pLR20">Cluj-Napoca: Autoworld</h3>
+                            <div class="span5">
+                                <div class="imgThumbs mT0">
+                                    <a class="fancybox" data-fancybox-group="gallery-autoworld" title="Cluj-Napoca: Autoworld" href="img/portofoliu/autoworld/1.jpg">
+                                        <img src="img/portofoliu/autoworld/1.jpg" alt="" class="bigPortfolioImg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="span7">
+                                <div class="secondNavCustom boxShadowCustom mL20">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id convallis mi, et ullamcorper lacus. Cras condimentum lorem sed elit fringilla, ac tempus nisl faucibus. Donec porta pulvinar tortor, ut pretium ligula semper eget.</p>
+                                </div>
+                            </div>
+                            <div class="cf"></div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-autoworld" title="Cluj-Napoca: Autoworld" href="img/portofoliu/autoworld/2.jpg">
+                                    <img src="img/portofoliu/autoworld/2.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-autoworld" title="Cluj-Napoca: Autoworld" href="img/portofoliu/autoworld/3.jpg">
+                                    <img src="img/portofoliu/autoworld/3.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-autoworld" title="Cluj-Napoca: Autoworld" href="img/portofoliu/autoworld/4.jpg">
+                                    <img src="img/portofoliu/autoworld/4.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-autoworld" title="Cluj-Napoca: Autoworld" href="img/portofoliu/autoworld/5.jpg">
+                                    <img src="img/portofoliu/autoworld/5.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="span2 imgThumbs">
+                                <a class="fancybox" data-fancybox-group="gallery-autoworld" title="Cluj-Napoca: Autoworld" href="img/portofoliu/autoworld/6.jpg">
+                                    <img src="img/portofoliu/autoworld/6.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="cf"></div>
+                            <!-- END client portfolio: constructii industriale -->
+                        </div>
                     </div>
-                    <!-- End Portfolio Projects -->
                 </div>
             </div>
             <!-- End Our Work Section -->
@@ -170,12 +280,17 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/waypoints.js"></script> <!-- WayPoints -->
         <script src="js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
-        <script src="js/jquery.isotope.js"></script> <!-- Isotope Filter -->
         <script src="js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
         <script src="js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
+        <script src="js/scripts.js"></script>
+        <script>
+            $(document).ready(function(){
+                portfolioChange("constructiiCivile");
+                portfolioChange("constructiiIndustriale");
+                portfolioChange("restaurari");
+            });
+        </script>
 
     </body>
 </html>

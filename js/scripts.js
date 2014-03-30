@@ -1,13 +1,11 @@
-jQuery(function($){
 
-var ADDCONCEPT = window.ADDCONCEPT || {};
 
 /* ==================================================
    Mobile Navigation
 ================================================== */
 var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 
-ADDCONCEPT.mobileNav = function(){
+function mobileNav(){
 	var windowWidth = $(window).width();
 
 	if( windowWidth <= 979 ) {
@@ -23,7 +21,7 @@ ADDCONCEPT.mobileNav = function(){
 	}
 }
 
-ADDCONCEPT.listenerMenu = function(){
+function listenerMenu(){
 	$('#mobile-nav').on('click', function(e){
 		$(this).toggleClass('open');
 
@@ -46,67 +44,18 @@ ADDCONCEPT.listenerMenu = function(){
    Navigation Fix
 ================================================== */
 
-ADDCONCEPT.nav = function(){
+function nav(){
 	$('.sticky-nav').waypoint('sticky');
 }
 
 
-/* ==================================================
-   Filter Works
-================================================== */
-
-ADDCONCEPT.filter = function (){
-	if($('#projects').length > 0){
-		var $container = $('#projects');
-
-		$container.isotope({
-		  // options
-		  animationEngine: 'best-available',
-		  itemSelector : '.item-thumbs',
-		  layoutMode : 'fitRows'
-		});
-
-
-		// filter items when filter link is clicked
-		var $optionSets = $('#options .option-set'),
-			$optionLinks = $optionSets.find('a');
-
-		  $optionLinks.click(function(){
-			var $this = $(this);
-			// don't proceed if already selected
-			if ( $this.hasClass('selected') ) {
-			  return false;
-			}
-			var $optionSet = $this.parents('.option-set');
-			$optionSet.find('.selected').removeClass('selected');
-			$this.addClass('selected');
-
-			// make option object dynamically, i.e. { filter: '.my-filter-class' }
-			var options = {},
-				key = $optionSet.attr('data-option-key'),
-				value = $this.attr('data-option-value');
-			// parse 'false' as false boolean
-			value = value === 'false' ? false : value;
-			options[ key ] = value;
-			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-			  // changes in layout modes need extra logic
-			  changeLayoutMode( $this, options )
-			} else {
-			  // otherwise, apply new options
-			  $container.isotope( options );
-			}
-
-			return false;
-		});
-	}
-}
 
 
 /* ==================================================
    FancyBox
 ================================================== */
 
-ADDCONCEPT.fancyBox = function(){
+function fancyBox(){
 	if($('.fancybox').length > 0 || $('.fancybox-various').length > 0){
 
 		$(".fancybox").fancybox({
@@ -123,41 +72,14 @@ ADDCONCEPT.fancyBox = function(){
 }
 
 
-/* ==================================================
-   Contact Form
-================================================== */
-//
-//ADDCONCEPT.contactForm = function(){
-//	$("#contact-submit").on('click',function() {
-//		$contact_form = $('#contact-form');
-//
-//		var fields = $contact_form.serialize();
-//
-//		$.ajax({
-//			type: "POST",
-//			url: "_include/php/contact.php",
-//			data: fields,
-//			dataType: 'json',
-//			success: function(response) {
-//
-//				if(response.status){
-//					$('#contact-form input').val('');
-//					$('#contact-form textarea').val('');
-//				}
-//
-//				$('#response').empty().html(response.html);
-//			}
-//		});
-//		return false;
-//	});
-//}
+
 
 
 /* ==================================================
    Next Section
 ================================================== */
 
-ADDCONCEPT.goSection = function(){
+function goSection(){
 	$('#nextsection').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
 
@@ -170,7 +92,7 @@ ADDCONCEPT.goSection = function(){
    GoUp
 ================================================== */
 
-ADDCONCEPT.goUp = function(){
+function goUp(){
 	$('#goUp').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
 
@@ -184,7 +106,7 @@ ADDCONCEPT.goUp = function(){
 	Scroll to Top
 ================================================== */
 
-ADDCONCEPT.scrollToTop = function(){
+function scrollToTop(){
 	var windowWidth = $(window).width(),
 		didScroll = false;
 
@@ -216,12 +138,8 @@ ADDCONCEPT.scrollToTop = function(){
    Thumbs / Social Effects
 ================================================== */
 
-ADDCONCEPT.utils = function(){
+function utils(){
 
-	$('.item-thumbs').bind('touchstart', function(){
-		$(".active").removeClass("active");
-      	$(this).addClass('active');
-    });
 
 	$('.image-wrap').bind('touchstart', function(){
 		$(".active").removeClass("active");
@@ -239,7 +157,7 @@ ADDCONCEPT.utils = function(){
    Accordion
 ================================================== */
 
-ADDCONCEPT.accordion = function(){
+function accordion(){
 	var accordion_trigger = $('.accordion-heading.accordionize');
 
 	accordion_trigger.delegate('.accordion-toggle','click', function(event){
@@ -261,7 +179,7 @@ ADDCONCEPT.accordion = function(){
    Toggle
 ================================================== */
 
-ADDCONCEPT.toggle = function(){
+function toggle(){
 	var accordion_trigger_toggle = $('.accordion-heading.togglize');
 
 	accordion_trigger_toggle.delegate('.accordion-toggle','click', function(event){
@@ -281,9 +199,27 @@ ADDCONCEPT.toggle = function(){
    Tooltip
 ================================================== */
 
-ADDCONCEPT.toolTip = function(){
+function toolTip(){
     $('a[data-toggle=tooltip]').tooltip();
 }
+
+/* ==================================================
+   Portfolio
+================================================== */
+
+function portfolioChange(contentId){
+    $("#" + contentId + "Link").click(function(){
+        $(".portfolioImgs").addClass("hidden");
+        $("#" + contentId + "Imgs").removeClass("hidden");
+        $(".portfolioTitle").addClass("hidden");
+        $("#" + contentId + "Title").removeClass("hidden");
+        $(".portfolioMenu").removeClass("active");
+        $("#" + contentId + "Link").addClass("active");
+
+    });
+}
+
+
 
 
 /* ==================================================
@@ -295,23 +231,19 @@ $(document).ready(function(){
 	var currentYear = (new Date).getFullYear();
 	$("#currentYear").html(currentYear);
 
-	ADDCONCEPT.nav();
-	ADDCONCEPT.mobileNav();
-	ADDCONCEPT.listenerMenu();
-	ADDCONCEPT.goSection();
-	ADDCONCEPT.goUp();
-	ADDCONCEPT.filter();
-	ADDCONCEPT.fancyBox();
-	ADDCONCEPT.contactForm();
-	ADDCONCEPT.scrollToTop();
-	ADDCONCEPT.utils();
-	ADDCONCEPT.accordion();
-	ADDCONCEPT.toggle();
-	//ADDCONCEPT.toolTip();
+	nav();
+	mobileNav();
+	listenerMenu();
+	goSection();
+	goUp();
+	fancyBox();
+	scrollToTop();
+	utils();
+	accordion();
+	toggle();
 });
 
 $(window).resize(function(){
-	ADDCONCEPT.mobileNav();
+	mobileNav();
 });
 
-});
