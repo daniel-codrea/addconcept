@@ -107,23 +107,32 @@ if(isset($_POST['submit'])) {
                     <div class="row">
                         <div class="span12">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2732.1851920236504!2d23.590088599999994!3d46.7809551!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490ea3d5e61f75%3A0x29927a87499054b4!2sStrada+Decebal!5e0!3m2!1sen!2s!4v1396161822094" width="910" height="300" frameborder="0" style="border:0;  margin:0 auto;"></iframe>
-                            <p class="spacer">&nbsp;</p>
-                            <p class="marginLR10p"><b>Adrian Petrus</b> - manager, tel: 0040 745 234499, email: a.petrus@addconcept.ro</p>
-                            <p class="marginLR10p"><b>Dragoș Sergiu</b> - inginer, tel: 0040 742 987519, email: s.dragos@addconcept.ro</p>
-                            <p class="spacer">&nbsp;</p>
-                            <?php if(isset($hasError)) { //If errors are found ?>
-                                <p class="spacer">&nbsp;</p>
-                                <p class="error"><b>Eroare!</b></p>
-                                <p class="error">Va rugam sa verificati corectitudinea informatiilor din fiecare camp obligatoriu al formularului. Va multumim!</p>
-                                <p class="spacer">&nbsp;</p>
-                            <?php } ?>
-                            <?php if(isset($emailSent) && $emailSent == true) { //If email is sent ?>
-                                <p class="spacer">&nbsp;</p>
-                                <p><b>Mesajul a fost trimis cu succes!</b></p>
-                                <p>Multumim <b><?php echo $name;?></b> pentru mesajul tau! Vom reveni cu un raspuns in cel mai scurt timp posibil.</p>
-                                <p class="spacer">&nbsp;</p>
-                            <?php } ?>
+
                             <div class="secondNavCustom">
+                                <p class="spacer">&nbsp;</p>
+                                <div class="row">
+                                    <div class="span6">
+                                        <p class="marginLR10p"><b>Adrian Petrus</b> - manager <br />&nbsp;&nbsp;&nbsp;&nbsp;tel: 0040 745 234499 <br />&nbsp;&nbsp;&nbsp;&nbsp;email: a.petrus@addconcept.ro</p>
+                                    </div>
+                                    <div class="span6">
+                                        <p class="marginLR10p"><b>Dragoș Sergiu</b> - inginer<br />&nbsp;&nbsp;&nbsp;&nbsp;tel: 0040 742 987519<br />&nbsp;&nbsp;&nbsp;&nbsp;email: s.dragos@addconcept.ro</p>
+                                    </div>
+                                </div>
+
+
+                                <p class="spacer">&nbsp;</p>
+                                <?php if(isset($hasError)) { //If errors are found ?>
+                                    <p class="spacer">&nbsp;</p>
+                                    <p class="error"><b>Eroare!</b></p>
+                                    <p class="error">Va rugam sa verificati corectitudinea informatiilor din fiecare camp obligatoriu al formularului. Va multumim!</p>
+                                    <p class="spacer">&nbsp;</p>
+                                <?php } ?>
+                                <?php if(isset($emailSent) && $emailSent == true) { //If email is sent ?>
+                                    <p class="spacer">&nbsp;</p>
+                                    <p><b>Mesajul a fost trimis cu succes!</b></p>
+                                    <p>Multumim <b><?php echo $name;?></b> pentru mesajul tau! Vom reveni cu un raspuns in cel mai scurt timp posibil.</p>
+                                    <p class="spacer">&nbsp;</p>
+                                <?php } ?>
                                 <form id="contact-form" class="contact-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                     <input type="text" name="name" placeholder="nume:" />
                                     <input type="text" name="email" placeholder="email:" />
@@ -133,7 +142,8 @@ if(isset($_POST['submit'])) {
                                     <input type="submit" name="submit" value="Trimite email" />
                                 </form>
                                 <p class="spacer">&nbsp;</p>
-                                <p class="marginLR10p"><b>SC ADDCONCEPT SRL</b> - Numarul in Registrul Comertului  J12/718/2008; Codul Unic de Identificare  RO 23327290</p>
+                                <p class="marginLR10p"><b>SC ADDCONCEPT SRL</b></p>
+                                <p class="marginLR10p">Numarul in Registrul Comertului  J12/718/2008; Codul Unic de Identificare  RO 23327290</p>
                                 <p class="marginLR10p">Sediu social: Str Padin 14/41 Cluj-Napoca</p>
                                 <p class="marginLR10p">Cont: RO12BTRL01301202K51563XX Banca Transilvania</p>
                                 <p class="marginLR10p">Capital social: 200 RON</p>
