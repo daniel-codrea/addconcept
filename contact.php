@@ -108,6 +108,9 @@ if(isset($_POST['submit'])) {
                         <div class="span12">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2732.1851920236504!2d23.590088599999994!3d46.7809551!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490ea3d5e61f75%3A0x29927a87499054b4!2sStrada+Decebal!5e0!3m2!1sen!2s!4v1396161822094" width="910" height="300" frameborder="0" style="border:0;  margin:0 auto;"></iframe>
                             <p class="spacer">&nbsp;</p>
+                            <p class="marginLR10p"><b>Adrian Petrus</b> - manager, tel: 0040 745 234499, email: a.petrus@addconcept.ro</p>
+                            <p class="marginLR10p"><b>Dragoș Sergiu</b> - inginer, tel: 0040 742 987519, email: s.dragos@addconcept.ro</p>
+                            <p class="spacer">&nbsp;</p>
                             <?php if(isset($hasError)) { //If errors are found ?>
                                 <p class="spacer">&nbsp;</p>
                                 <p class="error"><b>Eroare!</b></p>
@@ -130,10 +133,10 @@ if(isset($_POST['submit'])) {
                                     <input type="submit" name="submit" value="Trimite email" />
                                 </form>
                                 <p class="spacer">&nbsp;</p>
-                                <p class="marginLR10p"><b>Adrian Petrus</b>, 0745234499, manager</p>
-                                <p class="marginLR10p"><b>Dragoș Sergiu</b>, 0742987519, inginer</p>
-                                <p class="spacer">&nbsp;</p>
                                 <p class="marginLR10p"><b>SC ADDCONCEPT SRL</b> - Numarul in Registrul Comertului  J12/718/2008; Codul Unic de Identificare  RO 23327290</p>
+                                <p class="marginLR10p">Sediu social: Str Padin 14/41 Cluj-Napoca</p>
+                                <p class="marginLR10p">Cont: RO12BTRL01301202K51563XX Banca Transilvania</p>
+                                <p class="marginLR10p">Capital social: 200 RON</p>
                                 <p class="spacer">&nbsp;</p>
 
                             </div>
