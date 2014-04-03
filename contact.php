@@ -112,10 +112,10 @@ if(isset($_POST['submit'])) {
                                 <p class="spacer">&nbsp;</p>
                                 <div class="row">
                                     <div class="span6">
-                                        <p class="marginLR10p"><b>Adrian Petrus</b> - manager <br />&nbsp;&nbsp;&nbsp;&nbsp;tel: 0040 745 234499 <br />&nbsp;&nbsp;&nbsp;&nbsp;email: a.petrus@addconcept.ro</p>
+                                        <p class="marginLR10p"><b>Adrian Petrus</b> - manager <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tel: 0040 745 234499 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email: a.petrus@addconcept.ro</p>
                                     </div>
                                     <div class="span6">
-                                        <p class="marginLR10p"><b>Dragoș Sergiu</b> - inginer<br />&nbsp;&nbsp;&nbsp;&nbsp;tel: 0040 742 987519<br />&nbsp;&nbsp;&nbsp;&nbsp;email: s.dragos@addconcept.ro</p>
+                                        <p class="marginLR10p"><b>Dragoș Sergiu</b> - inginer<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tel: 0040 742 987519<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email: s.dragos@addconcept.ro</p>
                                     </div>
                                 </div>
 
